@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Assignment 3</title>
+
+<style type="text/css">
+         
+.borderclass:hover { border: 5px dashed red; } 
+    #theform { text-align: center}
+
+</style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+
+    <script>
+	 $(document).ready(function() {
+		$("#fontschanges").change(function () {
+			var str = "";
+			$("#fontschanges option:selected").each(function () {
+				str += $(this).text() + " ";
+			});
+			$("p").css('font-family', str);
+		});     
+	});    
+	</script>
+    
+    <script>
+        function calculateAge()
+{
+ var birthyear = 1996
+ var number = document.getElementById('txtYear').value;
+ number = parseInt(number);
+    document.write(number - birthyear + ' years old.' );
+    $('#all_about_turtles').append("<p> number</p>");
+}
+
+    </script>
+    <script>
+       $(document).ready(function () {
+$("#all_about_turtles").append('<p>'number'</p>'); 
+    </script>
+    
+    </head>
+
+    <body>
+   
+        <!-- (USE THIS FORMAT EXAMPLE FOR ONCLICK WITH JQUERY CODE) <img src="baseball.jpg" id="baseball"
+   onclick="$('#baseball').replaceWith('<h2>I love this game!!</h2>')">-->
+
+        <center><img src="image/nickel.jpg" alt="turtle" class="borderclass"></center> <!-- border applied to image under class "borderclass" -->
+        <center><h2>All About Turtles</h2></center>
+   
+        <div id="all_about_turtles">    
+    <p> Turtle, (order Testudines), any reptile with a body encased in a bony shell, including tortoises. Although numerous animals, from invertebrates to mammals, have evolved shells, none has an architecture like that of turtles.
+    </p>
+    
+    <p> There are approximately 356 species of turtles living on land in all continents except Antarctica and in both salt water and fresh water. Tortoises (family Testudinidae) live exclusively on land and have anatomic features distinguishing them from other turtles, but the term tortoise has long been used to refer to other terrestrial testudines as well, such as the box turtle and the wood turtle. Similarly, terrapin was sometimes used to describe any aquatic turtle but is now largely restricted to the edible diamondback terrapin (Malaclemys terrapin) of the eastern United States. </p>
+
+        </div> <!--Closing all_about_turtles div section -->
+    
+        <!-- Buttons for changing picture size -->
+    <span style="text-align:center;"> 
+	<p><input type="button" value="Shrink Image"
+		onclick="$('img').width('307px').height('200px')"></p>
+	<p><input type="button" value="Enlarge Pic"
+		onclick="$('img').width('580px').height('400px')"></p>
+	<p><input type="button" value="Restore Pic"
+		onclick="$('img').width('460px').height('300px')"></p>
+</span>
+   
+        <div id="theform">
+		<select id="fontschanges" >
+			<option>Select Font</option>
+			<option>Helvetica</option>
+			<option>Times New Roman</option>
+			<option>Verdana</option>
+       </select>     
+    
+         <p>Enter a year: <input type="text" id="txtYear">
+            <input type="button" value="find age" onclick="calculateAge()"></p> </div> <!-- Closing theform id div -->
+
+     </body>
+    
+    
+</html>
